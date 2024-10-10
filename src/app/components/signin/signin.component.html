@@ -1,1 +1,21 @@
-<p>signin works!</p>
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="authenticate()" class="form-control">
+        <h1>SignIn</h1>
+
+        <div>
+            <label>Email:</label>
+            <input formControlName="email" placeholder="Email">
+        </div>
+
+        <div>
+            <label>Password:</label>
+            <input formControlName="password" placeholder="Password">
+        </div>
+
+        <button class="btn-primary" type="submit">Login</button>
+
+        <p>Don't have an account?</p>
+
+        <button type="submit" class="btn-secondary" (click)="redirectToSignUp()">Create Account</button>
+    </form>
+</div>

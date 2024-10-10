@@ -1,1 +1,36 @@
-<p>signup works!</p>
+<div class="container">
+    <form [formGroup]="accountForm" (ngSubmit)="createAccount()" class="form-control">
+        <h1>Register</h1>
+
+        <div>
+            <label>First Name:</label>
+            <input formControlName="firstName" placeholder="First Name">
+        </div>
+
+        <div>
+            <label>Last Name:</label>
+            <input formControlName="lastName" placeholder="Last Name">
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input formControlName="email" placeholder="Email">
+        </div>
+
+        <div>
+            <label>Password:</label>
+            <input formControlName="password" placeholder="Password">
+        </div>
+
+        <div>
+            <label>Confirm Password:</label>
+            <input formControlName="confirmPassword" placeholder="Confirm Password">
+        </div>
+
+        <button [disabled]="accountForm.invalid"  type="submit" class="btn-primary">Create Account</button>
+
+        <p>Already have an account?</p>
+
+        <button class="btn-secondary" (click)="redirectToSignIn()">Login Now</button>
+    </form>
+</div>

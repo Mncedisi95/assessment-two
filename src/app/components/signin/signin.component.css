@@ -1,0 +1,80 @@
+h1{
+    text-align: center;
+    font-size:  2.2rem;
+    font-family: "Baloo Paaji", cursive;
+}
+
+p{
+    text-align: center;
+    color: #A9A9A9;
+}
+
+input{
+    width: 300px;
+    height: 5px;
+    padding: 18px;
+    font-size: 16px;
+    border: 1.5px solid #ddd;
+    margin: 5px 0 10px;
+}
+
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Baloo Paaji", cursive ;
+}
+
+button{
+    width: 340px;
+    padding: 12px 15px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 10px 10px 10px 0 rgb(205, 205, 205);
+    max-height: 80%;
+    max-width: 800;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #BA55D3;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: #DA70D6;
+}
+
+.btn-secondary{
+   background-color: #FFFFFF;
+   font-weight: bold;
+   border-color:#BA55D3;
+   color: #BA55D3;
+}
+
+.btn-secondary:hover{
+    background-color: #BA55D3;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}

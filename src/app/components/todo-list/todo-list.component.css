@@ -1,0 +1,122 @@
+h1{
+    text-align: center;
+    font-size:  2.2rem;
+    font-family: "Baloo Paaji", cursive;
+}
+
+input{
+    width: 300px;
+    height: 5px;
+    padding: 18px;
+    font-size: 16px;
+    border: 1.5px solid #ddd;
+    margin: 5px 0 10px;
+}
+
+textarea{
+    width: 300px;
+    height: 60px;
+    padding: 18px;
+    border: 1.5px solid #ddd;
+    margin: 5px 0 10px;
+    font-size: 16px;
+}
+
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Baloo Paaji", cursive ;
+}
+
+button{
+    width: 340px;
+    padding: 12px 15px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #BA55D3;
+    border: none;
+    font-weight: bold;
+}
+
+.btn{
+    width: 80px;
+    padding: 12px 12px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    background-color: #DA70D6;
+}
+
+.form-control{
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    max-height: 80%;
+    max-width: 800;
+}
+
+.select-box{
+    width: 338px;
+    height: 40px;
+    border: 1px solid #dedede;
+    margin: 5px 0 10px;
+}
+
+.content-table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 0.9em;
+    min-width: 900px;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr{
+    background-color:  #BA55D3;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid;
+}
+
+.content-table tbody td{
+    text-align: left;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color:  #F5F5F5;
+}
