@@ -37,6 +37,10 @@ button{
     cursor: pointer;
 }
 
+small{
+    color: #ff0000;
+}
+
 .container{
     display: flex;
     justify-content: center;

@@ -34,12 +34,26 @@ button{
     font-size: 14px;
     margin-top: 5px;
     display: block;
+    cursor: pointer;
 }
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn{
+    width: 150px;
+    color: #fff;
+    background-color: #BA55D3;
+    border: none;
+    font-weight: bold;
+    margin: 10px 20px;
+}
+
+.btn:hover{
+    background-color: #DA70D6;
 }
 
 .btn-primary{

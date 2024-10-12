@@ -4,22 +4,28 @@
         <h1>Schedule Task</h1>
         <div>
             <label>Task Name:</label>
-            <input formControlName="taskName" placeholder="Enter Task Name"/>
+            <input id="taskName" formControlName="taskName" placeholder="Enter Task Name"/>
+            <div *ngIf="todoForm.get('taskName')?.touched">
+                <small *ngIf="todoForm.get('taskName')?.errors?.['required']">Task Name is required</small>
+            </div>
         </div>
 
         <div>
             <label>Task Priority:</label>
-            <select class="select-box">
+            <select id="priority" formControlName="priority" class="select-box">
                 <option value="" disabled selected>Select Task Priorities</option>
                 <option value="Low">Low</option>
-                <option value="Meduim">Meduim</option>
+                <option value="Medium">Medium</option>
                 <option value="High">High</option>
             </select>
+            <div *ngIf="todoForm.get('priority')?.touched">
+                <small *ngIf="todoForm.get('priority')?.errors?.['required']">*Select atleast one priority</small>
+            </div>
         </div>
 
         <div>
             <label>Task Category:</label>
-            <select class="select-box">
+            <select id="category" formControlName="category" class="select-box">
                 <option value="" disabled selected>Select Task Category</option>
                 <option value="Personal">Personal</option>
                 <option value="Work-Related">Work-Related</option>
@@ -31,19 +37,32 @@
                 <option value="Health & Wellness">Health & Wellness</option>
                 <option value="Financial">Financial</option>
             </select>
+            <div *ngIf="todoForm.get('category')?.touched">
+                <small *ngIf="todoForm.get('category')?.errors?.['required']">*Select atleast one category</small>
+            </div>
         </div>
 
         <div>
             <label>Due Date:</label>
-            <input type="date" placeholder="select date"/>
+            <input id="date" type="date" formControlName="date"/>
+            <div *ngIf="todoForm.get('date')?.touched">
+                <small *ngIf="todoForm.get('date')?.errors?.['required']">*Due Date is required</small>
+            </div>
         </div>
         <div>
             <label>Task Description:</label>
-            <textarea formControlName="description" placeholder="Enter Description"></textarea>
+            <textarea id="description" formControlName="description" placeholder="Enter Description"></textarea>
+            <div *ngIf="todoForm.get('description')?.touched">
+                <small *ngIf="todoForm.get('description')?.errors?.['required']">*Task Description is required</small>
+            </div>
         </div>
 
         <div>
             <button type="submit" class="btn-primary">Create Task</button>
+        </div>
+
+        <div>
+            <input *ngIf="showMessage" type="text" class="success" placeholder="Task Scheduled Successfully"/>
         </div>
     </form>
 </div>
@@ -63,37 +82,16 @@
                     <th>View Details</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody *ngFor="let task of tasks">
                 <tr>
-                    <td>Date</td>
-                    <td>Low</td>
-                    <td>To-Do</td>
-                    <td>11-Oct-2015</td>
-                    <td><a class="btn btn-primary" (click)="redirectToTaskDetail()">Read More</a></td>
-                </tr>
-                <tr>
-                    <td>Interview</td>
-                    <td>High</td>
-                    <td>To-Do</td>
-                    <td>15-Oct-2015</td>
-                    <td><a class="btn btn-primary" (click)="redirectToTaskDetail()">Read More</a></td>
-                </tr>
-                <tr>
-                    <td>BirthDay Event</td>
-                    <td>Meduim</td>
-                    <td>To-Do</td>
-                    <td>28-Oct-2015</td>
-                    <td><a class="btn btn-primary" (click)="redirectToTaskDetail()">Read More</a></td>
-                </tr>
-                <tr>
-                    <td>Maths Examination</td>
-                    <td>High</td>
-                    <td>To-Do</td>
-                    <td>29-Oct-2015</td>
-                    <td><a class="btn btn-primary" (click)="redirectToTaskDetail()">Read More</a></td>
-                </tr>
+                    <td>{{task.taskName}}</td>
+                    <td [ngClass]="{'high-priority':task.priority === 'High', 'medium-priority':task.priority === 'Medium', 'low-priority':task.priority === 'Low'}">{{task.priority}}</td>
+                    <td>{{task.status}}</td>
+                    <td>{{task.date}}</td>
+                    <td><a class="btn btn-primary" (click)="redirectToTaskDetail(task)">Read More</a></td>
+                </tr>   
             </tbody>
         </table>
-    
+
     </div>
 </div>

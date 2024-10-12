@@ -41,6 +41,10 @@ button{
     cursor: pointer;
 }
 
+small{
+    color: #ff0000
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -119,4 +123,27 @@ button{
 
 .content-table tbody tr:nth-of-type(even){
     background-color:  #F5F5F5;
+}
+
+.high-priority{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.medium-priority{
+    color: #ffa500;
+    font-weight: bold;
+}
+
+.low-priority{
+    color: #0000cd;
+    font-weight: bold;
+}
+
+.success{
+    text-align: center;
+    margin-top: 15px;
+    background-color: 	#00ff00;
+    -webkit-text-fill-color: #fff;
+    font-weight: bold;
 }

@@ -5,14 +5,23 @@
         <div>
             <label>Email:</label>
             <input formControlName="email" placeholder="Email">
+            <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                <small *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</small>
+                <small *ngIf="loginForm.get('email')?.errors?.['email']">Enter valid email.</small>
+            </div>
         </div>
 
         <div>
             <label>Password:</label>
-            <input formControlName="password" placeholder="Password">
+            <input type="password" formControlName="password" placeholder="Password">
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                <small *ngIf="loginForm.get('password')?.errors?.['required']">*Password is required.</small>
+                <small *ngIf="loginForm.get('password')?.errors?.['minlength']">*Password must be atleast 8 characters long.</small><br>
+                <small *ngIf="loginForm.get('password')?.errors?.['pattern']">
+                    *Password must atleast include:<br>*One uppercase letter,<br>*One lowercase letter,<br>*One number and <br>*One special character.</small>
+            </div>
         </div>
-
-        <button class="btn-primary" type="submit">Login</button>
+        <button (click)="authenticate()" class="btn-primary" type="submit">Login</button>
 
         <p>Don't have an account?</p>
 

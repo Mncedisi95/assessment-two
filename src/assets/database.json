@@ -1,0 +1,15 @@
+{
+  "users": [],
+  "tasks": [
+    {
+      "taskName": "Exams",
+      "priority": "High",
+      "category": "Education",
+      "status": "To-Do",
+      "date": "2024-10-24",
+      "creationdate": "Sat Oct 12 2024 09:50:02 GMT+0200 (South Africa Standard Time)",
+      "description": "Study for Mathematics exam paper 1 and  Biology paper 2 as we are writing on the 24 October 2024. ",
+      "id": 1
+    }
+  ]
+}

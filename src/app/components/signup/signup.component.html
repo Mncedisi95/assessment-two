@@ -4,30 +4,61 @@
 
         <div>
             <label>First Name:</label>
-            <input formControlName="firstName" placeholder="First Name">
+            <input id="fname" formControlName="fname" placeholder="First Name">
+            <div *ngIf="accountForm.get('fname')?.touched">
+                <small *ngIf="accountForm.get('fname')?.errors?.['required']">*First Name is required.</small>
+            </div>
         </div>
 
         <div>
             <label>Last Name:</label>
-            <input formControlName="lastName" placeholder="Last Name">
+            <input id="lname" formControlName="lname" placeholder="Last Name">
+            <div *ngIf="accountForm.get('lname')?.touched">
+                <small *ngIf="accountForm.get('lname')?.errors?.['required']">*Last Name is required.</small>
+            </div>
         </div>
 
         <div>
             <label>Email:</label>
-            <input formControlName="email" placeholder="Email">
+            <input id="email" formControlName="email" placeholder="Email">
+            <div *ngIf="accountForm.get('email')?.invalid && accountForm.get('email')?.touched">
+                <small *ngIf="accountForm.get('email')?.errors?.['required']">Email is required.</small>
+                <small *ngIf="accountForm.get('email')?.errors?.['email']">Enter valid email.</small>
+            </div>
         </div>
 
         <div>
             <label>Password:</label>
-            <input formControlName="password" placeholder="Password">
+            <input type="password" id="password" formControlName="password" placeholder="Password">
+            <div *ngIf="accountForm.get('password')?.invalid && accountForm.get('password')?.touched">
+                <small *ngIf="accountForm.get('password')?.errors?.['required']">*Password is required.</small>
+                <small *ngIf="accountForm.get('password')?.errors?.['minlength']">*Password must be atleast 8 characters long.</small><br>
+                <small *ngIf="accountForm.get('password')?.errors?.['pattern']">
+                    *Password must atleast include:<br>*One uppercase letter,<br>*One lowercase letter,<br>*One number and <br>*One special character.
+                </small>
+            </div>
         </div>
-
+        
         <div>
             <label>Confirm Password:</label>
-            <input formControlName="confirmPassword" placeholder="Confirm Password">
+            <input type="password" id="confirmPass" formControlName="confirmPass" placeholder="Confirm Password">
+            <div *ngIf="accountForm.get('confirmPass')?.invalid && accountForm.get('confirmPass')?.touched">
+                <small *ngIf="accountForm.get('confirmPass')?.errors?.['required']">*Password is required.</small>
+                <small *ngIf="accountForm.get('confirmPass')?.errors?.['minlength']">*Password must be atleast 8 characters long.</small><br>
+                <small *ngIf="accountForm.get('confirmPass')?.errors?.['pattern']">
+                    *Password must atleast include:<br>*One uppercase letter,<br>*One lowercase letter,<br>*One number and <br>*One special character.
+                </small>
+                <small *ngIf="accountForm.get('password')?.valid && accountForm.get('confirm')?.dirty && (accountForm.get('password')?.value !== accountForm.get('confirmPass')?.value)">
+                    *Password does not match!
+                </small>
+            </div>
         </div>
 
         <button [disabled]="accountForm.invalid"  type="submit" class="btn-primary">Create Account</button>
+
+        <div>
+            <input *ngIf="showMessage" class="success" placeholder="Your Account has been Successfully created."/>
+        </div>
 
         <p>Already have an account?</p>
 
