@@ -12,9 +12,9 @@ h1{
 input{
     width: 300px;
     height: 5px;
+    border: none;
     padding: 18px;
     font-size: 16px;
-    border: 1.5px solid #BA55D3;
     margin: 5px 0 10px;
 }
 
@@ -77,4 +77,12 @@ button{
 .description{
     width: 340px;
     margin: 2px;
+}
+
+.success{
+    text-align: center;
+    margin-top: 15px;
+    background-color: 	#00ff00;
+    -webkit-text-fill-color: #fff;
+    font-weight: bold;
 }

@@ -21,7 +21,7 @@
     <div>
         <h1>Update Task</h1>
         <div>
-            <select class="select-box">
+            <select class="select-box" [(ngModel)]="status">
                 <option value="" disabled selected>Update Status</option>
                 <option value="To-Do">To-Do</option>
                 <option value="In-Progress">In-Progress</option>
@@ -30,8 +30,14 @@
                 <option value="Postposed">Postposed</option>
             </select>
         </div>
-        <button class="btn-primary">Update Task</button>
-        <button class="btn-primary">Remove Task</button>
+        <button (click)="updateTask()" class="btn-primary">Update Task</button>
+        <div>
+            <input *ngIf="updateMessage" class="success" placeholder="Task Updated Successfully"/>
+        </div>
+        <button (click)="removeTask()" class="btn-primary">Remove Task</button>
+        <div>
+            <input *ngIf="removeMessage" class="success" placeholder="Task Removed Successfully" />
+        </div>
     </div>
 </div>
 
@@ -40,10 +46,13 @@
         <h1>Reschedule Task</h1>
         <div>
             <label>Change Date</label>
-            <input type="date" />
+            <input type="date" [(ngModel)]="date" />
         </div>
         <div>
-            <button class="btn-primary">Reschedule</button>
+            <button (click)="rescheduleTask()" class="btn-primary">Reschedule</button>
+        </div>
+        <div>
+            <input *ngIf="scheduleMessage" class="success" placeholder="Task Reschedule Successfully"/>
         </div>
     </div>
 </div>

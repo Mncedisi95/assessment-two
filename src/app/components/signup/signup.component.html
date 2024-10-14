@@ -22,8 +22,13 @@
             <label>Email:</label>
             <input id="email" formControlName="email" placeholder="Email">
             <div *ngIf="accountForm.get('email')?.invalid && accountForm.get('email')?.touched">
-                <small *ngIf="accountForm.get('email')?.errors?.['required']">Email is required.</small>
-                <small *ngIf="accountForm.get('email')?.errors?.['email']">Enter valid email.</small>
+                <small *ngIf="accountForm.get('email')?.errors?.['required']">*Email is required.</small>
+                <small *ngIf="accountForm.get('email')?.errors?.['email']">*Enter valid email.</small>
+            </div>
+            <div>
+                <small *ngIf="showErrorMessage">
+                    *An account with this email address already exists. <br> *Use a different email address.
+                </small>
             </div>
         </div>
 
@@ -48,7 +53,9 @@
                 <small *ngIf="accountForm.get('confirmPass')?.errors?.['pattern']">
                     *Password must atleast include:<br>*One uppercase letter,<br>*One lowercase letter,<br>*One number and <br>*One special character.
                 </small>
-                <small *ngIf="accountForm.get('password')?.valid && accountForm.get('confirm')?.dirty && (accountForm.get('password')?.value !== accountForm.get('confirmPass')?.value)">
+            </div>
+            <div>
+                <small *ngIf="accountForm?.errors?.['mismatch']">
                     *Password does not match!
                 </small>
             </div>
@@ -57,9 +64,9 @@
         <button [disabled]="accountForm.invalid"  type="submit" class="btn-primary">Create Account</button>
 
         <div>
-            <input *ngIf="showMessage" class="success" placeholder="Your Account has been Successfully created."/>
+            <input *ngIf="showSuccessMessage" class="success" placeholder="Your Account has been Successfully created."/>
         </div>
-
+      
         <p>Already have an account?</p>
 
         <button class="btn-secondary" (click)="redirectToSignIn()">Login Now</button>

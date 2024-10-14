@@ -78,7 +78,7 @@ export class TodoListComponent {
         this.showMessage = false
       }, 2500);
 
-      }, 3000);
+      }, 1500);
    }
    
   /**

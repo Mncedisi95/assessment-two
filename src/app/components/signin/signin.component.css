@@ -82,3 +82,12 @@ small{
     border: none;
     font-weight: bold;
 }
+
+.unsuccess{
+    text-align: center;
+    margin-top: 15px;
+    background-color: 	#dc143c;
+    -webkit-text-fill-color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}

@@ -15,9 +15,10 @@ import { UsersService } from '../../services/users.service';
 })
 export class SigninComponent {
 
-  // declare all variables
+  // declare all propeties
   loginForm: FormGroup
   users : IUser[] = []
+  showErrorMessage : boolean = false
 
   /**
    * Default Constructor 
@@ -35,12 +36,14 @@ export class SigninComponent {
     })
   }
 
+  /**
+   * Load all users 
+   */
   ngOnInit(): void{
       // Get Request
     this.userService.getUsers().subscribe((data => {
       // get all users from the database 
       this.users = data
-      console.log(this.users);
     }))
   }
 
@@ -57,10 +60,32 @@ export class SigninComponent {
    */
   authenticate(){
 
-    //clear form 
-    this.loginForm.reset()
-  }
-  // match user with the email and password entered by user
+    for(var user of this.users){ // loop through the list of users
 
-  // redirect to task page using user id.
+     // match user email and password 
+     if(user.email === this.loginForm.get('email')?.value && user.password === this.loginForm.get('password')?.value){
+      // redirect user to task page.
+      this.router.navigate(['todolist'])
+     }
+     else{
+      //set timeout
+      setTimeout(() => {
+           //clear form 
+       this.loginForm.reset()
+       // display error message
+       this.showErrorMessage = true
+
+       setTimeout(() => {
+        // hide error message
+        this.showErrorMessage = false
+
+       }, 3000);
+      }, 1000);
+    
+     }
+
+    }
+
+  }
+
 }

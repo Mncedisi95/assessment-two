@@ -1,15 +1,47 @@
 {
-  "users": [],
+  "users": [
+    {
+      "firstName": "Mncedisi",
+      "lastName": "Masondo",
+      "email": "mncedisimasondo4@gmail.com",
+      "password": "Password@123",
+      "id": 1
+    },
+    {
+      "firstName": "Fikile ",
+      "lastName": "Mashaba",
+      "email": "fikilefix21@gmail.com",
+      "password": "Password@123",
+      "id": 2
+    },
+    {
+      "firstName": "Nomasonto",
+      "lastName": "Ngema",
+      "email": "mncedisimasondo4@gmail.com",
+      "password": "Sonto@45",
+      "id": 3
+    }
+  ],
   "tasks": [
     {
-      "taskName": "Exams",
-      "priority": "High",
-      "category": "Education",
-      "status": "To-Do",
-      "date": "2024-10-24",
-      "creationdate": "Sat Oct 12 2024 09:50:02 GMT+0200 (South Africa Standard Time)",
-      "description": "Study for Mathematics exam paper 1 and  Biology paper 2 as we are writing on the 24 October 2024. ",
+      "taskName": "Date",
+      "priority": "Medium",
+      "category": "Personal",
+      "status": "In-Progress",
+      "date": "2024-10-30",
+      "creationdate": "Sun Oct 13 2024 08:39:40 GMT+0200 (South Africa Standard Time)",
+      "description": "Go to date blah blah.....",
       "id": 1
+    },
+    {
+      "taskName": "Lay buy clothes",
+      "priority": "Low",
+      "category": "Shopping",
+      "status": "In-Progress",
+      "date": "2024-10-23",
+      "creationdate": "Sun Oct 13 2024 09:13:20 GMT+0200 (South Africa Standard Time)",
+      "description": "Lay buy clothes for kids for December party.",
+      "id": 2
     }
   ]
 }

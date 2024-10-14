@@ -6,7 +6,7 @@
             <label>Email:</label>
             <input formControlName="email" placeholder="Email">
             <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
-                <small *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</small>
+                <small *ngIf="loginForm.get('email')?.errors?.['required']">*Email is required.</small>
                 <small *ngIf="loginForm.get('email')?.errors?.['email']">Enter valid email.</small>
             </div>
         </div>
@@ -22,6 +22,9 @@
             </div>
         </div>
         <button (click)="authenticate()" class="btn-primary" type="submit">Login</button>
+        <div>
+            <input *ngIf="showErrorMessage" class="unsuccess" placeholder="Incorrect Email or Password." />
+        </div>
 
         <p>Don't have an account?</p>
 
