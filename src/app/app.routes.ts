@@ -10,7 +10,7 @@ export const routes: Routes = [
     //Setup all routes
     {path: 'signin', component:SigninComponent},
     {path: 'signup', component:SignupComponent},
-    {path: 'todolist', component:TodoListComponent},
+    {path: 'todolist/:id', component:TodoListComponent},
     {path: 'tododetail/:id',component:TodoDetailsComponent},
     {path: '', redirectTo:'/signin', pathMatch:'full'}
     

@@ -1,9 +1,10 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ITask } from '../../../Model/ITask';
 import { TasksService } from '../../services/tasks.service';
+
 
 @Component({
   selector: 'app-todo-list',
@@ -14,20 +15,22 @@ import { TasksService } from '../../services/tasks.service';
 })
 export class TodoListComponent {
 
-  // declare all variables
+  // declare all properties
   todoForm: FormGroup
-  tasks: ITask[] = [];
-  showMessage : boolean = false
+  tasks: ITask[] = []
+  usertasks: any[]= []
+  showMessage : boolean = false; overdueMessage: boolean = true
+  userID : any
 
   /**
    * @param router 
    * @param taskService 
    * @param formBuilder 
    */
-  constructor(private  router:Router,private formBuilder:FormBuilder, private taskService:TasksService){
+  constructor(private  router:Router,private formBuilder:FormBuilder, private taskService:TasksService,private activatedRoute: ActivatedRoute){
     //initialize todo form
     this.todoForm = this.formBuilder.group({
-      // declare all variables
+      // declare all properties
       taskName: ['', [Validators.required]],
       description: ['', [Validators.required]],
       date: ['', [Validators.required]],
@@ -37,13 +40,37 @@ export class TodoListComponent {
 
   }
 
+  /**
+   *  Load all tasks and display tasks for current user
+   */
   ngOnInit(): void{
 
-    this.taskService.getTasks().subscribe((data => {
-      this.tasks = data
-      console.log(this.tasks);
-    }))
+      // get user ID
+      this.userID = this.activatedRoute.snapshot.paramMap.get('id')
+
+      this.taskService.getTasks().subscribe((data => {
+        // load tasks from data to user
+        this.tasks = data
+        
+        // loop through the list of tasks
+        for(var list of this.tasks){
+          // match of tasks with user ID
+          if(list.userID === this.userID){
+  
+            // Check Overdue date
+            if(new Date() > new Date(list.date)){
+              // show overdue Message
+              this.overdueMessage = false
+            }
+  
+            // push them to new array
+            this.usertasks.push(list)
+          }
+        }
+  
+      }))
   }
+
 
    /**
     *  helper function that will help with creation of new task 
@@ -52,7 +79,7 @@ export class TodoListComponent {
     // create new todo task
     const newTask = {taskName: this.todoForm.get('taskName')?.value, priority: this.todoForm.get('priority')?.value,
       category: this.todoForm.get('category')?.value, status: "To-Do", date: this.todoForm.get('date')?.value, creationdate: Date(),
-      description: this.todoForm.get('description')?.value}
+      description: this.todoForm.get('description')?.value, userID: this.userID}
     
       // fetch or get from Json server
       fetch('http://localhost:3000/tasks', {
@@ -90,5 +117,5 @@ export class TodoListComponent {
   }
 
 
-
+  
 }

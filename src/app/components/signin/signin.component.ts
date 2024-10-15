@@ -65,7 +65,7 @@ export class SigninComponent {
      // match user email and password 
      if(user.email === this.loginForm.get('email')?.value && user.password === this.loginForm.get('password')?.value){
       // redirect user to task page.
-      this.router.navigate(['todolist'])
+      this.router.navigate(['todolist', user.id])
      }
      else{
       //set timeout

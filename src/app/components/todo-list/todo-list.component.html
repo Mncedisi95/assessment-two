@@ -82,16 +82,15 @@
                     <th>View Details</th>
                 </tr>
             </thead>
-            <tbody *ngFor="let task of tasks">
+            <tbody *ngFor="let task of usertasks">
                 <tr>
                     <td>{{task.taskName}}</td>
                     <td [ngClass]="{'high-priority':task.priority === 'High', 'medium-priority':task.priority === 'Medium', 'low-priority':task.priority === 'Low'}">{{task.priority}}</td>
                     <td>{{task.status}}</td>
-                    <td>{{task.date}}</td>
+                    <td *ngIf="overdueMessage">{{task.date}}</td>
                     <td><a class="btn btn-primary" (click)="redirectToTaskDetail(task)">Read More</a></td>
                 </tr>   
             </tbody>
         </table>
-
     </div>
 </div>

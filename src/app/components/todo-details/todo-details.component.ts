@@ -93,7 +93,7 @@ export class TodoDetailsComponent {
       //set timeout
       setTimeout(() => {
         // hide message
-        this.router.navigate(['/todolist'])
+        this.router.navigate(['/todolist', this.task?.userID])
       }, 1500);
     }
   }
@@ -124,7 +124,7 @@ export class TodoDetailsComponent {
       setTimeout(() => {
         // hide message
         this.scheduleMessage = false
-        
+
       }, 3000);
     }
 
@@ -135,6 +135,14 @@ export class TodoDetailsComponent {
    */
   returnTasksPage(){
     // return to task page
-    this.router.navigate(['/todolist'])
+    this.router.navigate(['/todolist', this.task?.userID])
+  }
+
+  /**
+   * Helper function to sign out
+   */
+  logout(){
+    // return to sign in page
+    this.router.navigate(['/'])
   }
 }

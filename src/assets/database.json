@@ -11,37 +11,65 @@
       "firstName": "Fikile ",
       "lastName": "Mashaba",
       "email": "fikilefix21@gmail.com",
-      "password": "Password@123",
+      "password": "Fikile#21",
       "id": 2
-    },
-    {
-      "firstName": "Nomasonto",
-      "lastName": "Ngema",
-      "email": "mncedisimasondo4@gmail.com",
-      "password": "Sonto@45",
-      "id": 3
     }
   ],
   "tasks": [
     {
-      "taskName": "Date",
-      "priority": "Medium",
-      "category": "Personal",
+      "taskName": "Complete Biology Essay",
+      "priority": "High",
+      "category": "Education",
       "status": "In-Progress",
-      "date": "2024-10-30",
-      "creationdate": "Sun Oct 13 2024 08:39:40 GMT+0200 (South Africa Standard Time)",
-      "description": "Go to date blah blah.....",
+      "date": "2024-10-31",
+      "creationdate": "Tue Oct 15 2024 17:26:31 GMT+0200 (South Africa Standard Time)",
+      "description": "Write a 5-page essay on the importance of cellular respiration in living organisms, citing at least 3 scientific sources.",
+      "userID": "1",
       "id": 1
     },
     {
-      "taskName": "Lay buy clothes",
-      "priority": "Low",
-      "category": "Shopping",
-      "status": "In-Progress",
-      "date": "2024-10-23",
-      "creationdate": "Sun Oct 13 2024 09:13:20 GMT+0200 (South Africa Standard Time)",
-      "description": "Lay buy clothes for kids for December party.",
+      "taskName": "Pay Bills",
+      "priority": "High",
+      "category": "Personal",
+      "status": "To-Do",
+      "date": "2024-10-25",
+      "creationdate": "Tue Oct 15 2024 17:28:43 GMT+0200 (South Africa Standard Time)",
+      "description": "Pay electricity and rent bills.",
+      "userID": "1",
       "id": 2
+    },
+    {
+      "taskName": "Plan Vacation",
+      "priority": "Low",
+      "category": "Personal",
+      "status": "To-Do",
+      "date": "2024-12-15",
+      "creationdate": "Tue Oct 15 2024 17:31:41 GMT+0200 (South Africa Standard Time)",
+      "description": "Research and book trip to Hawaii.",
+      "userID": "1",
+      "id": 3
+    },
+    {
+      "taskName": "Learn Javascript",
+      "priority": "Medium",
+      "category": "Education",
+      "status": "In-Progress",
+      "date": "2024-11-01",
+      "creationdate": "Tue Oct 15 2024 17:36:12 GMT+0200 (South Africa Standard Time)",
+      "description": "Complete javascript tutorials.",
+      "userID": "2",
+      "id": 4
+    },
+    {
+      "taskName": "Doctor's appointment",
+      "priority": "High",
+      "category": "Health & Wellness",
+      "status": "To-Do",
+      "date": "2024-10-22",
+      "creationdate": "Tue Oct 15 2024 17:38:02 GMT+0200 (South Africa Standard Time)",
+      "description": "Schedule annual health checkup.",
+      "userID": "2",
+      "id": 5
     }
   ]
 }

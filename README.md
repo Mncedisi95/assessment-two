@@ -1,27 +1,52 @@
-# AssessmentTwo
+# Assessement two
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+Welcome to my todo list website. A Simple, yet powerful task management tool.  
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Create and manage unlimited todo lists.
+2. Priotize tasks and customizable labels and due dates.
+3. Create user Account.
 
-## Code scaffolding
+## Technologies Used and Software Tools
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Front-End - HTML5, CSS and Typescript
+2. Back-End - TypeScript 
+3. Database - Json Server -> Json File 
+4. Software tools - Visual Studio Code and GitHub.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository: git clone https://github.com/Mncedisi95/assessment-two
+2. Install dependencies: npm install.
+3. Start the development server: npm start.
+4. Build and Deploy: npm run build and npm run deploy.
+5. Switch to a specific branch: git checkout master
+6. Pull changes from remote repository: git pull master
+7. Run tests for the project: npm run test.
+8. Run linter checks for code quality: npm run link.
+9. Generate documentation for the project: npm run docs.
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Sign up for a free account.
+2. Create your first todo list.
+3. Start adding, updating, removing tasks and getting organized.
 
-## Running end-to-end tests
+## Testing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Created two user account.
+2. Scheduled tasks on each user and updated status.
+3. Feel free to create your account and schedule tasks.
 
-## Further help
+## Challenges
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Auto refresh page after scheduling a task. Please refresh page manual to check if task is scheduled or not.
+2. I did not manage to do protected routes.
+3. I did manage to implement a overdue task functionality in the todolist component under ngOnInit but I did not manage to display it on the UI.
+
+## Author
+
+* Name: Mncedisi Masondo
+* Email: mncedisimasondo4@gmail.com
+* Linkedin Profile: https://www.linkedin.com/in/mncedisi-masondo-9791b2189/ 
