@@ -1,14 +1,14 @@
 ## Table of Content
 
--[introduction](#introduction)
--[Features](#features)
--[Technoligies and Software Tools](#technologies-and-software-tools)
--[Getting Started](#getting-started)
--[Usage](usage)
--[Testing](testing)
--[Screenshot](screenshot)
--[Live Demo](live-demo)
--[Author](author)
+- [introduction](#introduction)
+- [Features](#features)
+- [Technoligies and Software Tools](#technologies-and-software-tools)
+- [Getting Started](#getting-started)
+- [Usage](usage)
+- [Testing](testing)
+- [Screenshot](screenshot)
+- [Live Demo](live-demo)
+- [Author](author)
 
 ## Introduction
 
@@ -48,10 +48,10 @@ Welcome to my todo list app. A simple, yet powerful task management tool built u
 
 ## Screenshot
 
-![Sign-up Screen](scr/assets/screenshot/sign-up.png)
-![Sign-in Screen](scr/assets/screenshot/sign-in.png)
-![Home Screen](scr/assets/screenshot/Home.png)
-![Todo Detail](scr/assets/screenshot/Detail.png)
+![Sign-up Screen](src/assets/screenshot/sign-up.png)
+![Sign-in Screen](src/assets/screenshot/sign-in.png)
+![Home Screen](src/assets/screenshot/Home.png)
+![Todo Detail](src/assets/screenshot/Detail.png)
 
 ## Live Demo
 
