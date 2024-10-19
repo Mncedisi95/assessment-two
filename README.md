@@ -1,14 +1,27 @@
-# Assessement two
+## Table of Content
 
-Welcome to my todo list website. A Simple, yet powerful task management tool.  
+-[introduction](#introduction)
+-[Features](#features)
+-[Technoligies and Software Tools](#technologies-and-software-tools)
+-[Getting Started](#getting-started)
+-[Usage](usage)
+-[Testing](testing)
+-[Screenshot](screenshot)
+-[Live Demo](live-demo)
+-[Author](author)
+
+## Introduction
+
+Welcome to my todo list app. A simple, yet powerful task management tool built using angular 18.  
 
 ## Features
 
-1. Create and manage unlimited todo lists.
-2. Priotize tasks and customizable labels and due dates.
-3. Create user Account.
+* Login functionality.
+* Create user account functionality
+* Create and manage unlimited todo lists.
+* Priotize tasks and customizable labels and due dates.
 
-## Technologies Used and Software Tools
+## Technologies and Software Tools
 
 1. Front-End - HTML5, CSS and Typescript
 2. Back-End - TypeScript 
@@ -29,21 +42,26 @@ Welcome to my todo list website. A Simple, yet powerful task management tool.
 
 ## Usage
 
-1. Sign up for a free account.
-2. Create your first todo list.
-3. Start adding, updating, removing tasks and getting organized.
+* Sign up for a free account.
+* Create your first todo list.
+* Start adding, updating, removing tasks and getting organized.
+
+## Screenshot
+
+![Sign-up Screen](scr/assets/screenshot/sign-up.png)
+![Sign-in Screen](scr/assets/screenshot/sign-in.png)
+![Home Screen](scr/assets/screenshot/Home.png)
+![Todo Detail](scr/assets/screenshot/Detail.png)
+
+## Live Demo
+
+This Todo website is live at 
 
 ## Testing
 
 1. Created two user account.
 2. Scheduled tasks on each user and updated status.
 3. Feel free to create your account and schedule tasks.
-
-## Challenges
-
-1. Auto refresh page after scheduling a task. Please refresh page manual to check if task is scheduled or not.
-2. I did not manage to do protected routes.
-3. I did manage to implement a overdue task functionality in the todolist component under ngOnInit but I did not manage to display it on the UI.
 
 ## Author
 
